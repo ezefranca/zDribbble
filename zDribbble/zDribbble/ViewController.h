@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIAlertView+AFNetworking.h"
+#import "AFURLSessionManager.h"
+#import "AFNetworking.h"
+
+#define API_URL @"http://api.dribbble.com/shots/popular?page=1"
 
 @interface ViewController : UIViewController
 
