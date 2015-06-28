@@ -10,13 +10,15 @@
 		46B1E1AF4AED23CC8F23DDBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F4FA80CA25266EFA329754 /* libPods.a */; };
 		A4578D7D1B407F5500FA08D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D7C1B407F5500FA08D8 /* main.m */; };
 		A4578D801B407F5500FA08D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D7F1B407F5500FA08D8 /* AppDelegate.m */; };
-		A4578D831B407F5500FA08D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D821B407F5500FA08D8 /* ViewController.m */; };
+		A4578D831B407F5500FA08D8 /* ShotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D821B407F5500FA08D8 /* ShotsViewController.m */; };
 		A4578D861B407F5500FA08D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4578D841B407F5500FA08D8 /* Main.storyboard */; };
 		A4578D881B407F5500FA08D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4578D871B407F5500FA08D8 /* Images.xcassets */; };
 		A4578D8B1B407F5500FA08D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4578D891B407F5500FA08D8 /* LaunchScreen.xib */; };
 		A4578D971B407F5500FA08D8 /* zDribbbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D961B407F5500FA08D8 /* zDribbbleTests.m */; };
 		A4578DA71B40868C00FA08D8 /* Shots.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578DA61B40868C00FA08D8 /* Shots.m */; };
 		A4578DAA1B40881400FA08D8 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578DA91B40881400FA08D8 /* Player.m */; };
+		A4578DAD1B40991F00FA08D8 /* Root.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578DAC1B40991F00FA08D8 /* Root.m */; };
+		A4AAD6851B40B6A800346775 /* ShotsCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AAD6841B40B6A800346775 /* ShotsCustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,8 @@
 		A4578D7C1B407F5500FA08D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4578D7E1B407F5500FA08D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4578D7F1B407F5500FA08D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A4578D811B407F5500FA08D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A4578D821B407F5500FA08D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A4578D811B407F5500FA08D8 /* ShotsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShotsViewController.h; sourceTree = "<group>"; };
+		A4578D821B407F5500FA08D8 /* ShotsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShotsViewController.m; sourceTree = "<group>"; };
 		A4578D851B407F5500FA08D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4578D871B407F5500FA08D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4578D8A1B407F5500FA08D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,6 +52,10 @@
 		A4578DA61B40868C00FA08D8 /* Shots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shots.m; path = Model/Shots.m; sourceTree = "<group>"; };
 		A4578DA81B40881400FA08D8 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Model/Player.h; sourceTree = "<group>"; };
 		A4578DA91B40881400FA08D8 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Model/Player.m; sourceTree = "<group>"; };
+		A4578DAB1B40991F00FA08D8 /* Root.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Root.h; path = Model/Root.h; sourceTree = "<group>"; };
+		A4578DAC1B40991F00FA08D8 /* Root.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Root.m; path = Model/Root.m; sourceTree = "<group>"; };
+		A4AAD6831B40B6A800346775 /* ShotsCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShotsCustomCell.h; path = View/ShotsCustomCell.h; sourceTree = "<group>"; };
+		A4AAD6841B40B6A800346775 /* ShotsCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShotsCustomCell.m; path = View/ShotsCustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,8 @@
 				A4578DA61B40868C00FA08D8 /* Shots.m */,
 				A4578DA81B40881400FA08D8 /* Player.h */,
 				A4578DA91B40881400FA08D8 /* Player.m */,
+				A4578DAB1B40991F00FA08D8 /* Root.h */,
+				A4578DAC1B40991F00FA08D8 /* Root.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -153,6 +161,8 @@
 		A4578DA21B407FA800FA08D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4AAD6831B40B6A800346775 /* ShotsCustomCell.h */,
+				A4AAD6841B40B6A800346775 /* ShotsCustomCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -160,8 +170,8 @@
 		A4578DA31B407FB000FA08D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4578D811B407F5500FA08D8 /* ViewController.h */,
-				A4578D821B407F5500FA08D8 /* ViewController.m */,
+				A4578D811B407F5500FA08D8 /* ShotsViewController.h */,
+				A4578D821B407F5500FA08D8 /* ShotsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -320,11 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4578D831B407F5500FA08D8 /* ViewController.m in Sources */,
+				A4578D831B407F5500FA08D8 /* ShotsViewController.m in Sources */,
 				A4578D801B407F5500FA08D8 /* AppDelegate.m in Sources */,
 				A4578D7D1B407F5500FA08D8 /* main.m in Sources */,
 				A4578DA71B40868C00FA08D8 /* Shots.m in Sources */,
 				A4578DAA1B40881400FA08D8 /* Player.m in Sources */,
+				A4AAD6851B40B6A800346775 /* ShotsCustomCell.m in Sources */,
+				A4578DAD1B40991F00FA08D8 /* Root.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

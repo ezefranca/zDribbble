@@ -32,4 +32,14 @@
              };
 }
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionaryValue error:(NSError **)error {
+    self = [super initWithDictionary:dictionaryValue error:error];
+    if (self == nil) return nil;
+    
+    //    _Player = [[Player alloc] initWithDictionary:[dictionaryValue objectForKey:@"Player"] error:nil];
+    _shotPlayer = [MTLJSONAdapter modelOfClass:[Player class] fromJSONDictionary:[dictionaryValue objectForKey:@"shotPlayer"] error:nil];
+    
+    return self;
+}
+
 @end

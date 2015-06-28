@@ -10,11 +10,15 @@
 #import "UIAlertView+AFNetworking.h"
 #import "AFURLSessionManager.h"
 #import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "Root.h"
+#import "ShotsCustomCell.h"
 
 #define API_URL @"http://api.dribbble.com/shots/popular?page=1"
 
-@interface ViewController : UIViewController
+@interface ShotsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property(nonatomic,weak) IBOutlet UICollectionView *shotsList;
 
 @end
 
