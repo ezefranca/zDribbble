@@ -12,7 +12,7 @@
 
 @interface Shots : MTLModel <MTLJSONSerializing>
 
-@property (strong, nonatomic, readwrite) NSNumber *shotId;
+@property (strong, nonatomic, readwrite) NSString *shotId;
 @property (strong, nonatomic, readwrite) NSString *shotTitle;
 @property (strong, nonatomic, readwrite) NSString *shotDescription;
 @property (strong, nonatomic, readwrite) NSNumber *shotHeigth;
@@ -23,9 +23,9 @@
 @property (strong, nonatomic, readwrite) NSString *shotUrl;
 @property (strong, nonatomic, readwrite) NSString *shotShortUrl;
 @property (strong, nonatomic, readwrite) NSNumber *shotViewsCount;
-@property (strong, nonatomic, readwrite) NSNumber *shotReboundSourceId;
-@property (strong, nonatomic, readwrite) NSNumber *shotImageUrl;
-@property (strong, nonatomic, readwrite) NSNumber *shotImageTeaserUrl;
+@property (strong, nonatomic, readwrite) NSString *shotReboundSourceId;
+@property (strong, nonatomic, readwrite) NSString *shotImageUrl;
+@property (strong, nonatomic, readwrite) NSString *shotImageTeaserUrl;
 @property (strong, nonatomic, readwrite) NSString *shotImage400Url;
 @property (strong, nonatomic, readwrite) Player   *shotPlayer;
 @property (strong, nonatomic, readwrite) NSString *shotCreatedAt;
