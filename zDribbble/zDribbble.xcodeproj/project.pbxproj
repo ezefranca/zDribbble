@@ -83,11 +83,9 @@
 			children = (
 				A4578D7E1B407F5500FA08D8 /* AppDelegate.h */,
 				A4578D7F1B407F5500FA08D8 /* AppDelegate.m */,
-				A4578D811B407F5500FA08D8 /* ViewController.h */,
-				A4578D821B407F5500FA08D8 /* ViewController.m */,
-				A4578D841B407F5500FA08D8 /* Main.storyboard */,
-				A4578D871B407F5500FA08D8 /* Images.xcassets */,
-				A4578D891B407F5500FA08D8 /* LaunchScreen.xib */,
+				A4578DA01B407F7800FA08D8 /* Model */,
+				A4578DA21B407FA800FA08D8 /* View */,
+				A4578DA31B407FB000FA08D8 /* Controller */,
 				A4578D7A1B407F5500FA08D8 /* Supporting Files */,
 			);
 			path = zDribbble;
@@ -96,6 +94,7 @@
 		A4578D7A1B407F5500FA08D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A4578DA41B40803300FA08D8 /* Resources */,
 				A4578D7B1B407F5500FA08D8 /* Info.plist */,
 				A4578D7C1B407F5500FA08D8 /* main.m */,
 			);
@@ -117,6 +116,39 @@
 				A4578D951B407F5500FA08D8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4578DA01B407F7800FA08D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A4578DA21B407FA800FA08D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A4578DA31B407FB000FA08D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4578D811B407F5500FA08D8 /* ViewController.h */,
+				A4578D821B407F5500FA08D8 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4578DA41B40803300FA08D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4578D841B407F5500FA08D8 /* Main.storyboard */,
+				A4578D871B407F5500FA08D8 /* Images.xcassets */,
+				A4578D891B407F5500FA08D8 /* LaunchScreen.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
