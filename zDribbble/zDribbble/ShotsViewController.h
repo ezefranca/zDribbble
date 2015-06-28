@@ -18,7 +18,18 @@
 
 @interface ShotsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
+//Principal
 @property(nonatomic,weak) IBOutlet UICollectionView *shotsList;
+
+//For pull Refresh
+@property (nonatomic, strong) UIView *refreshLoadingView;
+@property (nonatomic, strong) UIView *refreshColorView;
+@property (nonatomic, strong) UIImageView *compass_background;
+@property (nonatomic, strong) UIImageView *compass_spinner;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (assign) BOOL isRefreshIconsOverlap;
+@property (assign) BOOL isRefreshAnimating;
+
 
 @end
 
