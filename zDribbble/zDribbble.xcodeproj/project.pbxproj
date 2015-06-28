@@ -15,6 +15,8 @@
 		A4578D881B407F5500FA08D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4578D871B407F5500FA08D8 /* Images.xcassets */; };
 		A4578D8B1B407F5500FA08D8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4578D891B407F5500FA08D8 /* LaunchScreen.xib */; };
 		A4578D971B407F5500FA08D8 /* zDribbbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D961B407F5500FA08D8 /* zDribbbleTests.m */; };
+		A4578DA71B40868C00FA08D8 /* Shots.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578DA61B40868C00FA08D8 /* Shots.m */; };
+		A4578DAA1B40881400FA08D8 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578DA91B40881400FA08D8 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		A4578D901B407F5500FA08D8 /* zDribbbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zDribbbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4578D951B407F5500FA08D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4578D961B407F5500FA08D8 /* zDribbbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zDribbbleTests.m; sourceTree = "<group>"; };
+		A4578DA51B40868C00FA08D8 /* Shots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shots.h; path = Model/Shots.h; sourceTree = "<group>"; };
+		A4578DA61B40868C00FA08D8 /* Shots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shots.m; path = Model/Shots.m; sourceTree = "<group>"; };
+		A4578DA81B40881400FA08D8 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Model/Player.h; sourceTree = "<group>"; };
+		A4578DA91B40881400FA08D8 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Model/Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,10 @@
 		A4578DA01B407F7800FA08D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4578DA51B40868C00FA08D8 /* Shots.h */,
+				A4578DA61B40868C00FA08D8 /* Shots.m */,
+				A4578DA81B40881400FA08D8 /* Player.h */,
+				A4578DA91B40881400FA08D8 /* Player.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -313,6 +323,8 @@
 				A4578D831B407F5500FA08D8 /* ViewController.m in Sources */,
 				A4578D801B407F5500FA08D8 /* AppDelegate.m in Sources */,
 				A4578D7D1B407F5500FA08D8 /* main.m in Sources */,
+				A4578DA71B40868C00FA08D8 /* Shots.m in Sources */,
+				A4578DAA1B40881400FA08D8 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
