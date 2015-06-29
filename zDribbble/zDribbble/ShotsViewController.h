@@ -14,14 +14,14 @@
 #import "Root.h"
 #import "ShotsCustomCell.h"
 
-#define API_URL @"http://api.dribbble.com/shots/popular?page=1"
+#define DRIBBBLE_API_URL @"http://api.dribbble.com/shots/popular"
 
 @interface ShotsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 //Principal
 @property(nonatomic,weak) IBOutlet UICollectionView *shotsList;
 
-//For pull Refresh
+//Para o pull refresh custom
 @property (nonatomic, strong) UIView *refreshLoadingView;
 @property (nonatomic, strong) UIView *refreshColorView;
 @property (nonatomic, strong) UIImageView *compass_background;

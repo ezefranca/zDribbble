@@ -12,9 +12,9 @@
 
 @interface Root : MTLModel <MTLJSONSerializing>
 
-@property (strong, nonatomic, readwrite) NSString *rootPage;
+@property (strong, nonatomic, readwrite) NSNumber *rootPage;
 @property (strong, nonatomic, readwrite) NSNumber *rootPerPage;
-@property (strong, nonatomic, readwrite) NSString *rootPages;
-@property (strong, nonatomic, readwrite) Shots *rootShots;
+@property (strong, nonatomic, readwrite) NSNumber *rootPages;
+@property (strong, nonatomic, readwrite) NSArray *rootShots;
 
 @end

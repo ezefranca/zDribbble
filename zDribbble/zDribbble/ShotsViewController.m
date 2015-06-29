@@ -9,8 +9,8 @@
 #import "ShotsViewController.h"
 
 @interface ShotsViewController () {
-    int page, maxPages;
-    NSMutableArray *shotsList;
+    int pagina, maxpaginas;
+    NSMutableArray *shotsArray;
 }
 
 
@@ -25,9 +25,9 @@
     [self setupRefreshControl];
     [self setTitle:@"zDribbble"];
                   
-    page = 1;
+    pagina = 1;
                   
-    shotsList = [[NSMutableArray alloc] init];
+    shotsArray = [[NSMutableArray alloc] init];
                   
     [self loadShots];
                   
@@ -51,24 +51,28 @@
 #pragma mark - Methods
 
 - (void)loadShots {
-    if(page >= maxPages && maxPages != 0) return;
-                  
+    //Nao carregar paginas que nao existem
+    if(pagina >= maxpaginas && maxpaginas != 0)
+        return;
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
                   
-    [manager GET:@"http://api.dribbble.com/shots/popular" parameters:@{@"page" : [NSNumber numberWithInt:page]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                      
-    if(maxPages == 0) maxPages = (int)[[responseObject objectForKey:@"pages"] integerValue];
-                      
-    [shotsList addObjectsFromArray:[MTLJSONAdapter modelsOfClass:[Shots class] fromJSONArray:[responseObject objectForKey:@"shots"] error:nil]];
-                      
+    [manager GET:DRIBBBLE_API_URL parameters:@{@"pagina" : [NSNumber numberWithInt:pagina]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    NSError *error = nil;
+    Root *root = [MTLJSONAdapter modelOfClass:[Root class] fromJSONDictionary:responseObject error:&error];
+    
+    [shotsArray addObjectsFromArray:[MTLJSONAdapter modelsOfClass:[Shots class] fromJSONArray:root.rootShots error:&error]];
+
+    if(maxpaginas == 0)
+        maxpaginas = [root.rootPages intValue];
+    
     [_shotsList reloadData];
-                      
-    page += 1;
-                      
+    pagina++;
     [_refreshControl endRefreshing];
                       
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                      //TODO
+        // Alert View
                       
         }];
     }
@@ -119,20 +123,19 @@
               
 #pragma mark - CollectionView
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if(page < maxPages){
-        return [shotsList count] + 1;
+    if(pagina < maxpaginas){
+        return [shotsArray count] + 1;
     }else{
-        return [shotsList count];
+        return [shotsArray count];
     }
 }
               
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
                   
-    if (indexPath.item < [shotsList count]){
+    if (indexPath.item < [shotsArray count]){
         ShotsCustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shotCell" forIndexPath:indexPath];
                       
-            Shots *shot = [shotsList objectAtIndex:[indexPath row]];
-                      
+            Shots *shot = [shotsArray objectAtIndex:[indexPath row]];
             [[cell Image] sd_setImageWithURL:[shot shotImage400Url]];
             [[cell Title] setText:[shot shotTitle]];
             [[cell ViewsCount] setText:[NSString stringWithFormat:@"%@", [shot shotViewsCount]]];
@@ -162,20 +165,14 @@
                   
 }
 
-#pragma mark Custom Pull to Refresh
-
 
 #pragma mark - PULL TO REFRESH
 
-- (void)pullToRefresh {
-    page = 1;
-    shotsList = [[NSMutableArray alloc] init];
-    
-    [self loadShots];
-}
-
 - (void)setupRefreshControl
 {
+    pagina = 1;
+    shotsArray = [[NSMutableArray alloc] init];
+    [self loadShots];
     // TODO: Programmatically inserting a UIRefreshControl
     self.refreshControl = [[UIRefreshControl alloc] init];
     

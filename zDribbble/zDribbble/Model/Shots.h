@@ -20,13 +20,13 @@
 @property (strong, nonatomic, readwrite) NSNumber *shotLikesCount;
 @property (strong, nonatomic, readwrite) NSNumber *shotCommentsCount;
 @property (strong, nonatomic, readwrite) NSNumber *shotReboundsCount;
-@property (strong, nonatomic, readwrite) NSString *shotUrl;
-@property (strong, nonatomic, readwrite) NSString *shotShortUrl;
+@property (strong, nonatomic, readwrite) NSURL *shotUrl;
+@property (strong, nonatomic, readwrite) NSURL *shotShortUrl;
 @property (strong, nonatomic, readwrite) NSNumber *shotViewsCount;
 @property (strong, nonatomic, readwrite) NSString *shotReboundSourceId;
 @property (strong, nonatomic, readwrite) NSString *shotImageUrl;
-@property (strong, nonatomic, readwrite) NSString *shotImageTeaserUrl;
-@property (strong, nonatomic, readwrite) NSString *shotImage400Url;
+@property (strong, nonatomic, readwrite) NSURL *shotImageTeaserUrl;
+@property (strong, nonatomic, readwrite) NSURL *shotImage400Url;
 @property (strong, nonatomic, readwrite) Player   *shotPlayer;
 @property (strong, nonatomic, readwrite) NSString *shotCreatedAt;
 
