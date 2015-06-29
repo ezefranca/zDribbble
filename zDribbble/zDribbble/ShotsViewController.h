@@ -10,17 +10,20 @@
 #import "UIAlertView+AFNetworking.h"
 #import "AFURLSessionManager.h"
 #import "AFNetworking.h"
+#import "JTAlertView.h"
 #import "UIImageView+WebCache.h"
 #import "Root.h"
 #import "ShotsCustomCell.h"
+#import "DetalhesViewController.h"
+#import "FlowLayout.h"
 
-#define DRIBBBLE_API_URL @"http://api.dribbble.com/shots/popular"
+#define DRIBBBLE_API_URL @"http://api.dribbble.com/shots/popular?page="
 
 @interface ShotsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 //Principal
 @property(nonatomic,weak) IBOutlet UICollectionView *shotsList;
-
+@property FlowLayout* flowLayout;
 //Para o pull refresh custom
 @property (nonatomic, strong) UIView *refreshLoadingView;
 @property (nonatomic, strong) UIView *refreshColorView;

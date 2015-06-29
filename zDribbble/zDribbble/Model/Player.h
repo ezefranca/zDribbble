@@ -22,11 +22,11 @@
 @property (strong, nonatomic, readwrite) NSNumber *playerCommentsReceivedCount;
 @property (strong, nonatomic, readwrite) NSNumber *playerReboundsCount;
 @property (strong, nonatomic, readwrite) NSNumber *playerReboundsReceivedCount;
-@property (strong, nonatomic, readwrite) NSString *playerUrl;
-@property (strong, nonatomic, readwrite) NSString *playerAvatarUrl;
+@property (strong, nonatomic, readwrite) NSURL *playerUrl;
+@property (strong, nonatomic, readwrite) NSURL *playerAvatarUrl;
 @property (strong, nonatomic, readwrite) NSNumber *playerUsername;
 @property (strong, nonatomic, readwrite) NSString *playerTwitterScreenName;
-@property (strong, nonatomic, readwrite) NSString *playerWebsiteUrl;
+@property (strong, nonatomic, readwrite) NSURL *playerWebsiteUrl;
 @property (strong, nonatomic, readwrite) NSString *playerDraftedByPlayerId;
 @property (strong, nonatomic, readwrite) NSNumber *playerShotsCount;
 @property (strong, nonatomic, readwrite) NSNumber *playerFollowingCount;

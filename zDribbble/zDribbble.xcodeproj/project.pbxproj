@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		375B8BCE1B417735001B4410 /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375B8BCD1B417735001B4410 /* DetalhesViewController.m */; };
+		375B8BD11B418AFA001B4410 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 375B8BD01B418AFA001B4410 /* FlowLayout.m */; };
 		46B1E1AF4AED23CC8F23DDBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F4FA80CA25266EFA329754 /* libPods.a */; };
 		A4578D7D1B407F5500FA08D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D7C1B407F5500FA08D8 /* main.m */; };
 		A4578D801B407F5500FA08D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4578D7F1B407F5500FA08D8 /* AppDelegate.m */; };
@@ -33,6 +35,10 @@
 
 /* Begin PBXFileReference section */
 		2375C06764D2EF312BABCCB8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		375B8BCC1B417735001B4410 /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
+		375B8BCD1B417735001B4410 /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
+		375B8BCF1B418AFA001B4410 /* FlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowLayout.h; path = View/FlowLayout.h; sourceTree = "<group>"; };
+		375B8BD01B418AFA001B4410 /* FlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowLayout.m; path = View/FlowLayout.m; sourceTree = "<group>"; };
 		51F4FA80CA25266EFA329754 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F8DFDA28F88CA1B352625E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A4578D771B407F5500FA08D8 /* zDribbble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zDribbble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +169,8 @@
 			children = (
 				A4AAD6831B40B6A800346775 /* ShotsCustomCell.h */,
 				A4AAD6841B40B6A800346775 /* ShotsCustomCell.m */,
+				375B8BCF1B418AFA001B4410 /* FlowLayout.h */,
+				375B8BD01B418AFA001B4410 /* FlowLayout.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -172,6 +180,8 @@
 			children = (
 				A4578D811B407F5500FA08D8 /* ShotsViewController.h */,
 				A4578D821B407F5500FA08D8 /* ShotsViewController.m */,
+				375B8BCC1B417735001B4410 /* DetalhesViewController.h */,
+				375B8BCD1B417735001B4410 /* DetalhesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -334,6 +344,8 @@
 				A4578D801B407F5500FA08D8 /* AppDelegate.m in Sources */,
 				A4578D7D1B407F5500FA08D8 /* main.m in Sources */,
 				A4578DA71B40868C00FA08D8 /* Shots.m in Sources */,
+				375B8BD11B418AFA001B4410 /* FlowLayout.m in Sources */,
+				375B8BCE1B417735001B4410 /* DetalhesViewController.m in Sources */,
 				A4578DAA1B40881400FA08D8 /* Player.m in Sources */,
 				A4AAD6851B40B6A800346775 /* ShotsCustomCell.m in Sources */,
 				A4578DAD1B40991F00FA08D8 /* Root.m in Sources */,

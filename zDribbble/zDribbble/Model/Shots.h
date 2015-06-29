@@ -24,7 +24,7 @@
 @property (strong, nonatomic, readwrite) NSURL *shotShortUrl;
 @property (strong, nonatomic, readwrite) NSNumber *shotViewsCount;
 @property (strong, nonatomic, readwrite) NSString *shotReboundSourceId;
-@property (strong, nonatomic, readwrite) NSString *shotImageUrl;
+@property (strong, nonatomic, readwrite) NSURL *shotImageUrl;
 @property (strong, nonatomic, readwrite) NSURL *shotImageTeaserUrl;
 @property (strong, nonatomic, readwrite) NSURL *shotImage400Url;
 @property (strong, nonatomic, readwrite) Player   *shotPlayer;

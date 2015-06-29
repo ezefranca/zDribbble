@@ -31,10 +31,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9lL-RH-cJ1">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9lL-RH-cJ1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="Qx2-jk-TU9">
@@ -51,7 +51,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-p7-XdA">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJG-p7-XdA">
                                                     <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                                 </imageView>
                                                 <view alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fnt-X3-APK">
@@ -108,6 +108,7 @@
                                             <constraint firstItem="Fnt-X3-APK" firstAttribute="leading" secondItem="1n7-lo-IeE" secondAttribute="leadingMargin" constant="-8" id="tq6-v8-2Sl"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="Fnt-X3-APK" secondAttribute="bottom" constant="-8" id="yMo-GM-Uc3"/>
                                         </constraints>
+                                        <size key="customSize" width="400" height="300"/>
                                         <connections>
                                             <outlet property="Image" destination="OJG-p7-XdA" id="pl4-Vg-Lzr"/>
                                             <outlet property="Title" destination="Vl3-w9-TcR" id="D8x-VE-DDF"/>
@@ -148,6 +149,7 @@
                             <constraint firstItem="9lL-RH-cJ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="cYC-fI-dxj"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Y5g-BW-qyG"/>
                     <connections>
                         <outlet property="shotsList" destination="9lL-RH-cJ1" id="u4f-c1-jh7"/>
@@ -157,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="90" y="189"/>
         </scene>
-        <!--viewDetail-->
+        <!--Detalhes View Controller-->
         <scene sceneID="7AE-bq-A77">
             <objects>
-                <viewController storyboardIdentifier="viewDetail" title="viewDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ipq-kw-BT2" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detalhes" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ipq-kw-BT2" customClass="DetalhesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7tf-zT-cYJ"/>
                         <viewControllerLayoutGuide type="bottom" id="GaK-HD-x7s"/>
@@ -172,8 +174,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rkm-i3-a9t">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IN7-yR-lGz">
-                                        <rect key="frame" x="8" y="8" width="584" height="438"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IN7-yR-lGz">
+                                        <rect key="frame" x="8" y="8" width="580" height="430"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IN7-yR-lGz" secondAttribute="height" multiplier="584:438" id="52f-Hb-dBK"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="5zX-wg-lge"/>
@@ -201,7 +203,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye.png" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-7e-MBz">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olho" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-7e-MBz">
                                                 <rect key="frame" x="508" y="15" width="26" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="exP-ax-0Ji"/>
@@ -220,8 +222,8 @@
                                             <constraint firstItem="A1U-ua-GEJ" firstAttribute="top" secondItem="ima-lO-99o" secondAttribute="top" constant="14" id="mSl-sK-sRo"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-qO-RNL">
-                                        <rect key="frame" x="8" y="459" width="40" height="40"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-qO-RNL">
+                                        <rect key="frame" x="8" y="459" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="OGO-v3-6Aq"/>
                                             <constraint firstAttribute="width" constant="40" id="QiJ-gv-S3o"/>
@@ -230,8 +232,8 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskTo" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-kw-E7z">
-                                        <rect key="frame" x="56" y="468" width="74" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-kw-E7z">
+                                        <rect key="frame" x="76" y="468" width="74" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="I9V-Uj-UPb"/>
                                         </constraints>
@@ -239,8 +241,8 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqf-Wt-pWF">
-                                        <rect key="frame" x="8" y="507" width="584" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqf-Wt-pWF">
+                                        <rect key="frame" x="8" y="527" width="584" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -274,12 +276,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Description" destination="oqf-Wt-pWF" id="95v-sY-63U"/>
-                        <outlet property="Image" destination="IN7-yR-lGz" id="U6T-ZS-k4N"/>
-                        <outlet property="PlayerName" destination="1Og-kw-E7z" id="NGV-bk-Pj9"/>
-                        <outlet property="PlayerPhoto" destination="7xy-qO-RNL" id="QTT-1f-Us4"/>
-                        <outlet property="ShotTitle" destination="E0p-ar-DbU" id="hu3-Ng-Ci9"/>
-                        <outlet property="ViewCount" destination="A1U-ua-GEJ" id="Irp-ut-Fqb"/>
+                        <outlet property="playerName" destination="1Og-kw-E7z" id="XAZ-dJ-PE7"/>
+                        <outlet property="playerPhoto" destination="7xy-qO-RNL" id="rKl-q2-Dk6"/>
+                        <outlet property="shotImage" destination="IN7-yR-lGz" id="A3k-eM-Thb"/>
+                        <outlet property="shotTitle" destination="E0p-ar-DbU" id="F48-ES-pwG"/>
+                        <outlet property="shotViewCount" destination="A1U-ua-GEJ" id="cgC-Tb-JIF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHv-QQ-fyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +289,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eye.png" width="38" height="30"/>
         <image name="olho" width="38" height="30"/>
     </resources>
 </document>

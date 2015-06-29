@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    self.flowLayout = [[FlowLayout alloc]init];
+    self.shotsList.collectionViewLayout = self.flowLayout;
     [self setupRefreshControl];
     [self setTitle:@"zDribbble"];
                   
@@ -56,27 +58,37 @@
         return;
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-                  
-    [manager GET:DRIBBBLE_API_URL parameters:@{@"pagina" : [NSNumber numberWithInt:pagina]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *url = [NSString stringWithFormat:@"%@%@", DRIBBBLE_API_URL, [NSNumber numberWithInt:pagina]];
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
     
     NSError *error = nil;
     Root *root = [MTLJSONAdapter modelOfClass:[Root class] fromJSONDictionary:responseObject error:&error];
     
     [shotsArray addObjectsFromArray:[MTLJSONAdapter modelsOfClass:[Shots class] fromJSONArray:root.rootShots error:&error]];
-
+        NSLog(@"%d", pagina);
     if(maxpaginas == 0)
         maxpaginas = [root.rootPages intValue];
-    
+        NSLog(@"%@", responseObject);
     [_shotsList reloadData];
-    pagina++;
+    pagina = pagina + 1;
     [_refreshControl endRefreshing];
-                      
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Alert View
-                      
+        [self.view setAlpha:0.3];
+        [self errorAlert];
         }];
     }
 
+-(void)errorAlert{
+    
+    JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"Ops :(" andImage:nil];
+    alertView.size = CGSizeMake(280, 230);
+    [alertView addButtonWithTitle:@"OK" style:JTAlertViewStyleDefault action:^(JTAlertView *alertView) {
+        [alertView hide];
+    }];
+    
+    [alertView show];
+}
 
 // Redimensionar a tela para cada device ou orientacao
 -(CGSize)resizeCollectionCells {
@@ -122,6 +134,7 @@
 }
               
 #pragma mark - CollectionView
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if(pagina < maxpaginas){
         return [shotsArray count] + 1;
@@ -131,7 +144,7 @@
 }
               
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-                  
+    NSLog(@"INDEXPATH %ld", (long)indexPath.row);
     if (indexPath.item < [shotsArray count]){
         ShotsCustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shotCell" forIndexPath:indexPath];
                       
@@ -153,16 +166,24 @@
               
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
                   
-//    DetailViewController *detail = [[self storyboard] instantiateViewControllerWithIdentifier:@"viewDetail"];
-//    [detail setShot:[shotsList objectAtIndex:[indexPath row]]];
-//    [[self navigationController] pushViewController:detail animated:YES];
+       DetalhesViewController *detalhesVC = [[self storyboard] instantiateViewControllerWithIdentifier:@"detalhes"];
+       [detalhesVC setShot:[shotsArray objectAtIndex:indexPath.row]];
+       detalhesVC.shot = [shotsArray objectAtIndex:[indexPath row]];
+      [[self navigationController] pushViewController:detalhesVC animated:YES];
 
 }
               
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-                  
+    
+    //return self.shotsList.frame.size;
     return [self resizeCollectionCells];
                   
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(    NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self.shotsList reloadData];
 }
 
 
