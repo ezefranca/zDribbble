@@ -7,6 +7,7 @@
 //
 
 #import "DetalhesViewController.h"
+#import <Social/Social.h>
 
 @interface DetalhesViewController ()
 
@@ -51,4 +52,15 @@
  */
 
 
+- (IBAction)shareShot:(id)sender {
+    
+    
+    SLComposeViewController *socialController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [socialController setInitialText:[shot shotTitle]];
+    [socialController addImage:_shotImage.image];
+    [socialController addURL:[shot shotUrl]];
+   // [socialController setCompletionHandler:completionHandler];
+    [self presentViewController:socialController animated:YES completion:nil];
+
+}
 @end

@@ -33,6 +33,7 @@
 @property (assign) BOOL isRefreshIconsOverlap;
 @property (assign) BOOL isRefreshAnimating;
 
+- (IBAction)infoButtonClick:(id)sender;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3723F8331B42BF7C00FE24EC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3723F8321B42BF7C00FE24EC /* Social.framework */; };
 		375B8BCE1B417735001B4410 /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375B8BCD1B417735001B4410 /* DetalhesViewController.m */; };
 		375B8BD11B418AFA001B4410 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 375B8BD01B418AFA001B4410 /* FlowLayout.m */; };
 		46B1E1AF4AED23CC8F23DDBE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F4FA80CA25266EFA329754 /* libPods.a */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		2375C06764D2EF312BABCCB8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3723F8321B42BF7C00FE24EC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		375B8BCC1B417735001B4410 /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
 		375B8BCD1B417735001B4410 /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
 		375B8BCF1B418AFA001B4410 /* FlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowLayout.h; path = View/FlowLayout.h; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3723F8331B42BF7C00FE24EC /* Social.framework in Frameworks */,
 				46B1E1AF4AED23CC8F23DDBE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +89,7 @@
 		A0F77780296B0EF9FF7F54BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3723F8321B42BF7C00FE24EC /* Social.framework */,
 				51F4FA80CA25266EFA329754 /* libPods.a */,
 			);
 			name = Frameworks;

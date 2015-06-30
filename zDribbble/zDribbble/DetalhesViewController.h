@@ -22,5 +22,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *shotTitle;
 @property (strong, nonatomic) IBOutlet UILabel *shotViewCount;
 @property (strong, nonatomic) IBOutlet UILabel *playerName;
+- (IBAction)shareShot:(id)sender;
 
 @end

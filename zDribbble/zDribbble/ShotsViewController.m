@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self customize];
     self.flowLayout = [[FlowLayout alloc]init];
     self.shotsList.collectionViewLayout = self.flowLayout;
     [self setupRefreshControl];
@@ -48,6 +49,11 @@
               
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)customize{
+    UIImage *image = [UIImage imageNamed:@"navbar"];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:image];
 }
               
 #pragma mark - Methods
@@ -357,4 +363,14 @@
 }
 
               
+- (IBAction)infoButtonClick:(id)sender {
+    NSLog(@"Teste");
+    JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"Teste desenvolvido para Netshoes - Github @ezefranca" andImage:[UIImage imageNamed:@"netshoes"]];
+    alertView.size = CGSizeMake(280, 230);
+    [alertView addButtonWithTitle:@"OK" style:JTAlertViewStyleDefault action:^(JTAlertView *alertView) {
+        [alertView hide];
+    }];
+    
+    [alertView show];
+}
 @end
