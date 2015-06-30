@@ -18,6 +18,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
+    Reachability *reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    reachability.reachableBlock = ^(Reachability *reachability) {
+        
+    };
+    
+    reachability.unreachableBlock = ^(Reachability *reachability) {
+        NSString *title = [NSString stringWithFormat:@"Ops! Verifique sua conexao com a internet :)"];
+        JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:title andImage:[UIImage imageNamed:@"falha"]];
+        alertView.size = CGSizeMake(280, 230);
+        [alertView addButtonWithTitle:@"OK" style:JTAlertViewStyleDefault action:^(JTAlertView *alertView) {
+            [alertView hide];
+        }];
+        
+        [alertView show];
+    };
+    [reachability startNotifier];
     return YES;
 }
 

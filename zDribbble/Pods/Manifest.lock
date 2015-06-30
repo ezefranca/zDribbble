@@ -24,6 +24,8 @@ PODS:
   - Mantle (2.0.2):
     - Mantle/extobjc (= 2.0.2)
   - Mantle/extobjc (2.0.2)
+  - MBSimpleLoadingIndicator (0.1.0)
+  - Reachability (3.2)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -32,12 +34,16 @@ DEPENDENCIES:
   - AFNetworking
   - JTAlertView
   - Mantle
+  - MBSimpleLoadingIndicator
+  - Reachability
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   JTAlertView: 7fab8266a7d83447f16a41ff6778088182ef1475
   Mantle: 967fd31ea0220890b2e76589198996b534bb3fb1
+  MBSimpleLoadingIndicator: bb386548fda4a75fd792b1793ac1cd8ff2862cf7
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
 COCOAPODS: 0.36.0.beta.1

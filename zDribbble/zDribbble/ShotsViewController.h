@@ -16,6 +16,7 @@
 #import "ShotsCustomCell.h"
 #import "DetalhesViewController.h"
 #import "FlowLayout.h"
+#import "Reachability.h"
 
 #define DRIBBBLE_API_URL @"http://api.dribbble.com/shots/popular?page="
 

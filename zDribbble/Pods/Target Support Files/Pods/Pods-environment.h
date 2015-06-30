@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_JTAlertView 0
 #define COCOAPODS_VERSION_PATCH_JTAlertView 2
 
+// MBSimpleLoadingIndicator
+#define COCOAPODS_POD_AVAILABLE_MBSimpleLoadingIndicator
+#define COCOAPODS_VERSION_MAJOR_MBSimpleLoadingIndicator 0
+#define COCOAPODS_VERSION_MINOR_MBSimpleLoadingIndicator 1
+#define COCOAPODS_VERSION_PATCH_MBSimpleLoadingIndicator 0
+
 // Mantle
 #define COCOAPODS_POD_AVAILABLE_Mantle
 #define COCOAPODS_VERSION_MAJOR_Mantle 2
@@ -65,6 +71,12 @@
 #define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 2
 #define COCOAPODS_VERSION_MINOR_Mantle_extobjc 0
 #define COCOAPODS_VERSION_PATCH_Mantle_extobjc 2
+
+// Reachability
+#define COCOAPODS_POD_AVAILABLE_Reachability
+#define COCOAPODS_VERSION_MAJOR_Reachability 3
+#define COCOAPODS_VERSION_MINOR_Reachability 2
+#define COCOAPODS_VERSION_PATCH_Reachability 0
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage

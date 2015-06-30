@@ -220,7 +220,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqf-Wt-pWF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqf-Wt-pWF" customClass="HTMLLabel">
                                         <rect key="frame" x="8" y="574" width="584" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -343,6 +343,7 @@
                     <connections>
                         <outlet property="playerName" destination="1Og-kw-E7z" id="XAZ-dJ-PE7"/>
                         <outlet property="playerPhoto" destination="7xy-qO-RNL" id="rKl-q2-Dk6"/>
+                        <outlet property="shotDescription" destination="oqf-Wt-pWF" id="Hsh-WC-m7k"/>
                         <outlet property="shotImage" destination="IN7-yR-lGz" id="A3k-eM-Thb"/>
                         <outlet property="shotTitle" destination="E0p-ar-DbU" id="F48-ES-pwG"/>
                         <outlet property="shotViewCount" destination="A1U-ua-GEJ" id="cgC-Tb-JIF"/>

@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "Shots.h"
 #import "UIImageView+WebCache.h"
+#import "HTMLLabel.h"
 
 @interface DetalhesViewController : UIViewController
 
 @property(nonatomic, strong) Shots *shot;
 
 
-@property(nonatomic, weak) IBOutlet UILabel *shotDescription;
-
+@property(nonatomic, weak) IBOutlet HTMLLabel *shotDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *shotImage;
 @property (strong, nonatomic) IBOutlet UIImageView *playerPhoto;
 @property (strong, nonatomic) IBOutlet UILabel *shotTitle;
