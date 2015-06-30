@@ -10,13 +10,14 @@
 
 @interface ShotsViewController () {
     int pagina, maxpaginas;
-    NSMutableArray *shotsArray;
 }
 
 
 @end
 
 @implementation ShotsViewController
+
+@synthesize shotsArray;
 
 #pragma mark - Ciclo de vida
 - (void)viewDidLoad {

@@ -4,6 +4,8 @@ inhibit_all_warnings!
 
 platform :ios, '8.0'
 
+link_with 'zDribbble', 'zDribbbleTests'
+
 pod 'Mantle'
 pod 'AFNetworking'
 pod 'SDWebImage'

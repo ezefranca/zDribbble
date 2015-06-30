@@ -8,16 +8,31 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "ShotsViewController.h"
+#import "DetalhesViewController.h"
 
 @interface zDribbbleTests : XCTestCase
 
+@property (nonatomic) ShotsViewController *vcTest;
+@property (nonatomic) DetalhesViewController *dtTest;
 @end
 
 @implementation zDribbbleTests
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    // Testar a requisicao para API do Dribble
+    
+    _vcTest = [[ShotsViewController alloc]init];
+    [_vcTest loadShots];
+    XCTAssertEqualObjects(_vcTest.shotsArray, nil, @"A Requisicao para API nao funcionou");
+    
+    if (_vcTest.shotsArray) {
+        _dtTest = [[DetalhesViewController alloc]init];
+        _dtTest.shot = [_vcTest.shotsArray objectAtIndex:0];
+        XCTAssertEqualObjects(_dtTest.shot, nil, @"A Atribuicao do Shot para os detalhes nao funcionou");
+    }
 }
 
 - (void)tearDown {

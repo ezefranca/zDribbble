@@ -23,6 +23,7 @@
 
 //Principal
 @property(nonatomic,weak) IBOutlet UICollectionView *shotsList;
+@property(nonatomic, strong) NSMutableArray *shotsArray;
 @property FlowLayout* flowLayout;
 //Para o pull refresh custom
 @property (nonatomic, strong) UIView *refreshLoadingView;
@@ -34,6 +35,9 @@
 @property (assign) BOOL isRefreshAnimating;
 
 - (IBAction)infoButtonClick:(id)sender;
+
+//Metodos
+- (void)loadShots;
 
 @end
 
