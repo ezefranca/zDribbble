@@ -38,6 +38,7 @@
 
 //Metodos
 - (void)loadShots;
-
+- (void)customize;
+- (void)errorAlert:(NSError *)error;
 @end
 

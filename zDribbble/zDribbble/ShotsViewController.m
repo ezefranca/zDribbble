@@ -39,13 +39,7 @@
                                           selector:@selector(handleDidChangeStatusBarOrientationNotification:)
                                           name:UIApplicationDidChangeStatusBarOrientationNotification
                                                              object:nil];
-                  
-//    refreshControl = [[UIRefreshControl alloc] init];
-//    [refreshControl addTarget:self action:@selector(pullToRefresh) forControlEvents:UIControlEventValueChanged];
-//    [_shotsList addSubview:_refreshControl];
     [_shotsList setAlwaysBounceVertical:YES];
-                  
-                  
 }
               
 - (void)didReceiveMemoryWarning {
@@ -82,13 +76,14 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Alert View
         [self.view setAlpha:0.3];
-        [self errorAlert];
+        [self errorAlert:error];
         }];
     }
 
--(void)errorAlert{
+-(void)errorAlert:(NSError *)error{
     
-    JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"Ops :(" andImage:nil];
+    NSString *title = [NSString stringWithFormat:@"Ops! %@", error.description];
+    JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:title andImage:nil];
     alertView.size = CGSizeMake(280, 230);
     [alertView addButtonWithTitle:@"OK" style:JTAlertViewStyleDefault action:^(JTAlertView *alertView) {
         [alertView hide];
