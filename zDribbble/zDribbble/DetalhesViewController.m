@@ -52,15 +52,25 @@
  */
 
 
-- (IBAction)shareShot:(id)sender {
+- (IBAction)shareShotFacebook:(id)sender {
+    
+    
+    SLComposeViewController *socialController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [socialController setInitialText:[shot shotTitle]];
+    [socialController addImage:_shotImage.image];
+    [socialController addURL:[shot shotUrl]];
+    [self presentViewController:socialController animated:YES completion:nil];
+
+}
+
+- (IBAction)shareShotTwitter:(id)sender {
     
     
     SLComposeViewController *socialController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     [socialController setInitialText:[shot shotTitle]];
     [socialController addImage:_shotImage.image];
     [socialController addURL:[shot shotUrl]];
-   // [socialController setCompletionHandler:completionHandler];
     [self presentViewController:socialController animated:YES completion:nil];
-
+    
 }
 @end

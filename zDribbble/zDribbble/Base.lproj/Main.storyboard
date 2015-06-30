@@ -258,12 +258,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfm-pK-KAi">
                                                 <rect key="frame" x="454" y="7" width="33" height="33"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <state key="normal" image="share">
+                                                <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="shareShot:" destination="ipq-kw-BT2" eventType="touchUpInside" id="3U1-qZ-wT7"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -292,17 +289,39 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZv-yM-O4F">
+                                        <rect key="frame" x="516" y="515" width="39" height="25"/>
+                                        <state key="normal" image="Facebook Filled-50">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareShotFacebook:" destination="ipq-kw-BT2" eventType="touchUpInside" id="l4i-3V-N0A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewO-Jh-6FI">
+                                        <rect key="frame" x="553" y="515" width="35" height="25"/>
+                                        <state key="normal" image="Twitter Filled-50">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareShotTwitter:" destination="ipq-kw-BT2" eventType="touchUpInside" id="rU3-oh-wgT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="oqf-Wt-pWF" firstAttribute="top" secondItem="7xy-qO-RNL" secondAttribute="bottom" constant="8" id="1Ep-O1-S9S"/>
                                     <constraint firstItem="IN7-yR-lGz" firstAttribute="bottom" secondItem="ima-lO-99o" secondAttribute="bottom" id="26V-vB-Hb5"/>
                                     <constraint firstItem="IN7-yR-lGz" firstAttribute="trailing" secondItem="ima-lO-99o" secondAttribute="trailing" id="2ef-Yg-JKh"/>
                                     <constraint firstItem="1Og-kw-E7z" firstAttribute="top" secondItem="ima-lO-99o" secondAttribute="bottom" constant="22" id="4uc-5l-2g1"/>
+                                    <constraint firstItem="ewO-Jh-6FI" firstAttribute="leading" secondItem="YZv-yM-O4F" secondAttribute="trailing" constant="22" id="5E6-TB-flZ"/>
+                                    <constraint firstItem="ewO-Jh-6FI" firstAttribute="top" secondItem="A1U-ua-GEJ" secondAttribute="bottom" constant="34" id="7eO-fa-H8U"/>
                                     <constraint firstItem="oqf-Wt-pWF" firstAttribute="centerX" secondItem="Rkm-i3-a9t" secondAttribute="centerX" id="8X2-4M-0rx"/>
                                     <constraint firstItem="ima-lO-99o" firstAttribute="leading" secondItem="7xy-qO-RNL" secondAttribute="leading" id="CCF-UK-gnh"/>
                                     <constraint firstItem="7xy-qO-RNL" firstAttribute="top" secondItem="ima-lO-99o" secondAttribute="bottom" constant="13" id="JpM-3x-XIb"/>
+                                    <constraint firstAttribute="trailing" secondItem="ewO-Jh-6FI" secondAttribute="trailing" constant="8" id="TT4-as-TLN"/>
                                     <constraint firstItem="oqf-Wt-pWF" firstAttribute="trailing" secondItem="ima-lO-99o" secondAttribute="trailing" id="W3A-ew-DFu"/>
                                     <constraint firstItem="1Og-kw-E7z" firstAttribute="leading" secondItem="7xy-qO-RNL" secondAttribute="trailing" constant="8" id="XxV-sW-dsa"/>
+                                    <constraint firstItem="YZv-yM-O4F" firstAttribute="top" secondItem="A1U-ua-GEJ" secondAttribute="bottom" constant="34" id="cF9-lx-RYK"/>
                                     <constraint firstItem="7xy-qO-RNL" firstAttribute="leading" secondItem="oqf-Wt-pWF" secondAttribute="leading" id="eRJ-no-inn"/>
                                     <constraint firstAttribute="bottom" secondItem="oqf-Wt-pWF" secondAttribute="bottom" constant="75" id="ghg-aq-Mu5"/>
                                     <constraint firstItem="oqf-Wt-pWF" firstAttribute="leading" secondItem="Rkm-i3-a9t" secondAttribute="leadingMargin" id="ii4-iP-zYn"/>
@@ -335,7 +354,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Facebook Filled-50" width="25" height="25"/>
+        <image name="Twitter Filled-50" width="25" height="25"/>
         <image name="olho" width="38" height="30"/>
-        <image name="share" width="26" height="26"/>
     </resources>
 </document>
