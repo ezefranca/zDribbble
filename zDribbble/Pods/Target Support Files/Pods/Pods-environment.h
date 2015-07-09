@@ -48,6 +48,24 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
+// ARChromeActivity
+#define COCOAPODS_POD_AVAILABLE_ARChromeActivity
+#define COCOAPODS_VERSION_MAJOR_ARChromeActivity 1
+#define COCOAPODS_VERSION_MINOR_ARChromeActivity 0
+#define COCOAPODS_VERSION_PATCH_ARChromeActivity 0
+
+// ARSafariActivity
+#define COCOAPODS_POD_AVAILABLE_ARSafariActivity
+#define COCOAPODS_VERSION_MAJOR_ARSafariActivity 0
+#define COCOAPODS_VERSION_MINOR_ARSafariActivity 0
+#define COCOAPODS_VERSION_PATCH_ARSafariActivity 1
+
+// JBWebViewController
+#define COCOAPODS_POD_AVAILABLE_JBWebViewController
+#define COCOAPODS_VERSION_MAJOR_JBWebViewController 1
+#define COCOAPODS_VERSION_MINOR_JBWebViewController 0
+#define COCOAPODS_VERSION_PATCH_JBWebViewController 7
+
 // JTAlertView
 #define COCOAPODS_POD_AVAILABLE_JTAlertView
 #define COCOAPODS_VERSION_MAJOR_JTAlertView 1
@@ -71,6 +89,24 @@
 #define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 2
 #define COCOAPODS_VERSION_MINOR_Mantle_extobjc 0
 #define COCOAPODS_VERSION_PATCH_Mantle_extobjc 2
+
+// NJKWebViewProgress
+#define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress
+#define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress 0
+#define COCOAPODS_VERSION_MINOR_NJKWebViewProgress 2
+#define COCOAPODS_VERSION_PATCH_NJKWebViewProgress 3
+
+// NJKWebViewProgress/Core
+#define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress_Core
+#define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress_Core 0
+#define COCOAPODS_VERSION_MINOR_NJKWebViewProgress_Core 2
+#define COCOAPODS_VERSION_PATCH_NJKWebViewProgress_Core 3
+
+// NJKWebViewProgress/ProgressView
+#define COCOAPODS_POD_AVAILABLE_NJKWebViewProgress_ProgressView
+#define COCOAPODS_VERSION_MAJOR_NJKWebViewProgress_ProgressView 0
+#define COCOAPODS_VERSION_MINOR_NJKWebViewProgress_ProgressView 2
+#define COCOAPODS_VERSION_PATCH_NJKWebViewProgress_ProgressView 3
 
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability

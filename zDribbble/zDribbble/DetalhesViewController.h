@@ -10,12 +10,13 @@
 #import "Shots.h"
 #import "UIImageView+WebCache.h"
 #import "HTMLLabel.h"
+#import "JBWebViewController.h"
 
 @interface DetalhesViewController : UIViewController
 
 @property(nonatomic, strong) Shots *shot;
 
-
+@property (nonatomic, strong) JBWebViewController *jbWebview;
 @property(nonatomic, weak) IBOutlet HTMLLabel *shotDescription;
 @property (strong, nonatomic) IBOutlet UIImageView *shotImage;
 @property (strong, nonatomic) IBOutlet UIImageView *playerPhoto;

@@ -14,10 +14,11 @@
 @end
 
 @implementation DetalhesViewController
-@synthesize shot;
+@synthesize shot, jbWebview;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupTouchShot];
     // Do any additional setup after loading the view.
     
     [self setTitle:@"Shot Detalhes"];
@@ -39,6 +40,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setupTouchShot{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapShot)];
+    tap.numberOfTapsRequired = 1;
+    [_shotImage setUserInteractionEnabled:YES];
+    [_shotImage addGestureRecognizer:tap];
+    
+
+}
+
+-(void)tapShot{
+   jbWebview = [[JBWebViewController alloc] initWithUrl:[shot shotUrl]];
+   [jbWebview show];
+    
 }
 
 - (IBAction)shareShotFacebook:(id)sender {

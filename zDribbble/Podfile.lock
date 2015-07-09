@@ -20,11 +20,22 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - ARChromeActivity (1.0.0)
+  - ARSafariActivity (0.0.1)
+  - JBWebViewController (1.0.7):
+    - ARChromeActivity (= 1.0)
+    - ARSafariActivity (= 0.0.1)
+    - NJKWebViewProgress (= 0.2.3)
   - JTAlertView (1.0.2)
   - Mantle (2.0.2):
     - Mantle/extobjc (= 2.0.2)
   - Mantle/extobjc (2.0.2)
   - MBSimpleLoadingIndicator (0.1.0)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
   - Reachability (3.2)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
@@ -32,6 +43,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - JBWebViewController
   - JTAlertView
   - Mantle
   - MBSimpleLoadingIndicator
@@ -40,9 +52,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  ARChromeActivity: 40d77445498fded9d32cbf4a41e8585766feffd6
+  ARSafariActivity: f2d5fb199772bc6dd78fcb2b5ea068d70f040847
+  JBWebViewController: 55d636542efeb1c8597851f72c8edf3478683652
   JTAlertView: 7fab8266a7d83447f16a41ff6778088182ef1475
   Mantle: 967fd31ea0220890b2e76589198996b534bb3fb1
   MBSimpleLoadingIndicator: bb386548fda4a75fd792b1793ac1cd8ff2862cf7
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
