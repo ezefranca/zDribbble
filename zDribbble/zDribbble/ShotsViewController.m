@@ -49,6 +49,7 @@
 - (void)customize{
     UIImage *image = [UIImage imageNamed:@"navbar"];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:image];
+    [self.view setTranslatesAutoresizingMaskIntoConstraints:YES];
 }
               
 #pragma mark - Methods
@@ -107,28 +108,28 @@
                   
         switch (width) {
         case 320:
-                size = CGSizeMake(305, 229);
+                size = CGSizeMake(306, 230);
                 break;
         case 375:
                 size = CGSizeMake(360, 270);
                 break;
         case 480:
-                size = CGSizeMake(228, 171);
+                size = CGSizeMake(228, 170);
                 break;
         case 568:
-                size = CGSizeMake(270, 203);
+                size = CGSizeMake(270, 204);
                 break;
         case 667:
                 size = CGSizeMake(320, 240);
                 break;
         case 736:
-                size = CGSizeMake(352, 265);
+                size = CGSizeMake(352, 266);
                 break;
         case 768:
-                size = CGSizeMake(367, 265);
+                size = CGSizeMake(366, 266);
                 break;
         case 1024:
-                size = CGSizeMake(495, 371);
+                size = CGSizeMake(496, 372);
                 break;
         default:
                 size = CGSizeMake(400, 300);
