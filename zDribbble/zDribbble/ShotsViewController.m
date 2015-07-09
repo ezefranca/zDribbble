@@ -341,7 +341,7 @@
 
               
 - (IBAction)infoButtonClick:(id)sender {
-    JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"Teste desenvolvido para Netshoes - Github @ezefranca" andImage:[UIImage imageNamed:@"netshoes"]];
+    JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"zDribbble Opensource - Github @ezefranca" andImage:[UIImage imageNamed:@"netshoes"]];
     alertView.size = CGSizeMake(280, 230);
     [alertView addButtonWithTitle:@"OK" style:JTAlertViewStyleDefault action:^(JTAlertView *alertView) {
         [alertView hide];
