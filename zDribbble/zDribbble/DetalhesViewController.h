@@ -12,7 +12,7 @@
 #import "HTMLLabel.h"
 #import "JBWebViewController.h"
 
-@interface DetalhesViewController : UIViewController
+@interface DetalhesViewController : UIViewController <HTMLLabelDelegate>
 
 @property(nonatomic, strong) Shots *shot;
 

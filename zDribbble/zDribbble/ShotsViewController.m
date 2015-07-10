@@ -20,6 +20,15 @@
 @synthesize shotsArray;
 
 #pragma mark - Ciclo de vida
+
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    self.view.frame = self.view.bounds;
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -28,8 +37,7 @@
     self.flowLayout = [[FlowLayout alloc]init];
     self.shotsList.collectionViewLayout = self.flowLayout;
     [self setupRefreshControl];
-    [self setTitle:@"zDribbble"];
-                  
+    
     pagina = 1;
                   
     shotsArray = [[NSMutableArray alloc] init];
@@ -45,6 +53,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+#pragma mark - Customize 
 
 - (void)customize{
     UIImage *image = [UIImage imageNamed:@"navbar"];
@@ -74,19 +84,19 @@
     Root *root = [MTLJSONAdapter modelOfClass:[Root class] fromJSONDictionary:responseObject error:&error];
     
     [shotsArray addObjectsFromArray:[MTLJSONAdapter modelsOfClass:[Shots class] fromJSONArray:root.rootShots error:&error]];
-    if(maxpaginas == 0)
-        maxpaginas = [root.rootPages intValue];
+    if(maxpaginas == 0) maxpaginas = [root.rootPages intValue];
     [_shotsList reloadData];
     pagina = pagina + 1;
     [_refreshControl endRefreshing];
+        
+    if (pagina == 2) [load finish];
     
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self.view setAlpha:0.3];
         [self errorAlert:error];
         }];
     
-    if (pagina == 1)
-    [load finish];
+   
 }
 
 -(void)errorAlert:(NSError *)error{
@@ -100,50 +110,12 @@
     
     [alertView show];
 }
-// Redimensionar a tela para cada device ou orientacao
--(CGSize)resizeCollectionCells {
-    int width = [[UIScreen mainScreen] bounds].size.width;
-    
-        CGSize size;
-                  
-        switch (width) {
-        case 320:
-                size = CGSizeMake(306, 230);
-                break;
-        case 375:
-                size = CGSizeMake(360, 270);
-                break;
-        case 480:
-                size = CGSizeMake(228, 170);
-                break;
-        case 568:
-                size = CGSizeMake(270, 204);
-                break;
-        case 667:
-                size = CGSizeMake(320, 240);
-                break;
-        case 736:
-                size = CGSizeMake(352, 266);
-                break;
-        case 768:
-                size = CGSizeMake(366, 266);
-                break;
-        case 1024:
-                size = CGSizeMake(496, 372);
-                break;
-        default:
-                size = CGSizeMake(400, 300);
-                break;
-    }
-                  
-    return size;
-}
-              
+
 - (void)handleDidChangeStatusBarOrientationNotification:(NSNotification *)notification;{
         [_shotsList reloadData];
 }
               
-#pragma mark - CollectionView
+#pragma mark - CollectionView Delegate and Methods
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if(pagina < maxpaginas){
@@ -188,9 +160,48 @@
               
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    //return self.shotsList.frame.size;
-    return [self resizeCollectionCells];
+    int tamanhoTela = [[UIScreen mainScreen] bounds].size.width;
+    return [self resizeCollectionCells:tamanhoTela];
                   
+}
+
+// Redimensionar a tela para cada device ou orientacao
+-(CGSize)resizeCollectionCells:(int)tamanhoTela {
+    
+    
+    CGSize size;
+    
+    switch (tamanhoTela) {
+        case 320:
+            size = CGSizeMake(306, 230);
+            break;
+        case 375:
+            size = CGSizeMake(360, 270);
+            break;
+        case 480:
+            size = CGSizeMake(228, 170);
+            break;
+        case 568:
+            size = CGSizeMake(270, 204);
+            break;
+        case 667:
+            size = CGSizeMake(320, 240);
+            break;
+        case 736:
+            size = CGSizeMake(352, 266);
+            break;
+        case 768:
+            size = CGSizeMake(366, 266);
+            break;
+        case 1024:
+            size = CGSizeMake(496, 372);
+            break;
+        default:
+            size = CGSizeMake(400, 300);
+            break;
+    }
+    
+    return size;
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(    NSTimeInterval)duration
@@ -200,7 +211,7 @@
 }
 
 
-#pragma mark - PULL TO REFRESH
+#pragma mark - PULL TO REFRESH Methods
 
 - (void)setupRefreshControl
 {
@@ -241,10 +252,10 @@
 - (void)refresh:(id)sender{
     
     [self.shotsList reloadData];
-    double delayInSeconds = 2.0;
+    double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [self.refreshControl endRefreshing];
+     [self.refreshControl endRefreshing];
     });
 }
 
@@ -307,7 +318,7 @@
 
 - (void)animateRefreshView
 {
-    NSArray *colorArray = @[[UIColor purpleColor],[UIColor whiteColor],[UIColor cyanColor],[UIColor orangeColor]];
+    NSArray *colorArray = @[[UIColor purpleColor],[UIColor whiteColor]];
     static int colorIndex = 0;
 
     self.isRefreshAnimating = YES;
@@ -340,6 +351,7 @@
     self.refreshColorView.backgroundColor = [UIColor clearColor];
 }
 
+#pragma mark - Button info
               
 - (IBAction)infoButtonClick:(id)sender {
     JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"zDribbble Opensource - Github @ezefranca" andImage:[UIImage imageNamed:@"netshoes"]];

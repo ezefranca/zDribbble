@@ -26,6 +26,7 @@
 @property(nonatomic,weak) IBOutlet UICollectionView *shotsList;
 @property(nonatomic, strong) NSMutableArray *shotsArray;
 @property FlowLayout* flowLayout;
+@property (nonatomic, strong) ShotsCustomCell *shotPrototypeCell;
 //Para o pull refresh custom
 @property (nonatomic, strong) UIView *refreshLoadingView;
 @property (nonatomic, strong) UIView *refreshColorView;

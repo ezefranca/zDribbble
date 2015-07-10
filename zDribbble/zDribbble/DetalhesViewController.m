@@ -57,6 +57,9 @@
     
 }
 
+
+#pragma mark - SHARE BUTTONS
+
 - (IBAction)shareShotFacebook:(id)sender {
     
     
